@@ -32,6 +32,8 @@
     }
 </style>
 <body>
+    <h2>Scroll</h2>
+<span id="directionality">▼</span>
 <class>
 <h3>카스티엘은 누구인가?</h3>
 <p>카스티엘(Castiel)는 미국 CW방송국의 드라마 《수퍼내추럴》에 등장하는 천사로써, 사냥꾼인 윈체스터 형제들을 도와주는이다. 시즌 4부터 등장하며, 딘을 지옥에서 이끌어 올려준 장본인이다. 미샤 콜린스가 연기하며, 시즌 4~5까지는 주연으로 등장하다가 시즌 6 이후부터 조연(스페셜 게스트)로 출연 중이다.</p>
@@ -47,7 +49,66 @@
 <li><a href="https://youtu.be/fr-zvI4tRBM" style="color:red"> 카스티엘의 레전드 씬.</a></li>
 </ol>
 </class>
+<style>
+    @font-face {
+        font-family: 'Calluna';
+        src: url(https://lh3.googleusercontent.com/proxy/i7zRiiJoxQgksWj1aQJZ4L4KKLe6cojqVEtZQZAwhjyW1_0dfUdDFJiulT5KRvfsoGVnl8J-YPwYr-26IGhLhd2NizIEoY5VGDdGiFzq_FXJ0ntC6U9rQUBO8qXGF7YD0g-7YKsZZ2RJvb3ydKgfoX1C8g_Z) format('opentype');
+      }
+      * { 
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Calluna, Arial, sans-serif;
+        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(https://lh3.googleusercontent.com/proxy/i7zRiiJoxQgksWj1aQJZ4L4KKLe6cojqVEtZQZAwhjyW1_0dfUdDFJiulT5KRvfsoGVnl8J-YPwYr-26IGhLhd2NizIEoY5VGDdGiFzq_FXJ0ntC6U9rQUBO8qXGF7YD0g-7YKsZZ2RJvb3ydKgfoX1C8g_Z);
+        background-repeat: no-repeat;
+        background-attachment: fixed !important;
+        background-size: 100% !important;
+        background-position: center top !important;
+        padding: 1rem;
+        padding-top: 45%;
+        color: #fff;
+      }
+      
+      h1 {
+        font-size: 4rem;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        line-height: 1;
+        position: absolute;
+        top: 10px;
+        font-weight: 100;
+      }
+      p {
+        font-size: 1.3rem;
+        text-align: left;
+        line-height: 1.6;
+        margin-left: 8rem;
+        margin-right: 8rem;
+        color: white;
+      }
+      h2 {
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      span {
+        display: block;
+        margin: 0;
+        text-align: center;
+        font-size: 3rem;
+      }
+     
+    </style>
+    <script>
+    var nystories = document.querySelector("p").offsetTop;
+    window.onscroll = function() {
+      if (window.pageYOffset > 0) {
+     var opac = (window.pageYOffset / nystories);
+        console.log(opac);
+      document.body.style.background = "linear-gradient(rgba(255, 255, 255, " + opac + "), rgba(255, 255, 255, " + opac + ")), url(https://lh3.googleusercontent.com/proxy/i7zRiiJoxQgksWj1aQJZ4L4KKLe6cojqVEtZQZAwhjyW1_0dfUdDFJiulT5KRvfsoGVnl8J-YPwYr-26IGhLhd2NizIEoY5VGDdGiFzq_FXJ0ntC6U9rQUBO8qXGF7YD0g-7YKsZZ2RJvb3ydKgfoX1C8g_Z);
+      }
+    }
+</script>
 
-<img src="cas 2.jpg" width="60%">
+
 </body>
 </html>
