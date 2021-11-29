@@ -30,9 +30,9 @@
 <body>
     <h2>Scroll</h2>
 <span id="directionality">▼</span>
-
-<h3>샘 윈체스터는 누구인가?</h3>
 <class>
+<h3>샘 윈체스터는 누구인가?</h3>
+
 <p>샘 윈체스터(Sam Winchester)는 미국 CW방송국의 드라마 《수퍼내추럴》에 등장하는 주인공으로, 유령을 잡는 퇴마사와 초자연적인 존재들을 잡는 사냥꾼이다. 형인 딘 윈체스터와 함께 다닌다. 배우 제러드 파달렉키가 샘 윈체스터 역을 맡고 있다.</p>
 <h3>성격</h3>
 <P>엄친아. 스탠포드 대를 들어가 로스쿨에 합격할 정도로 머리도 좋고, 키는 2m에 육박할 정도로 크고 잘 빠졌으며 형과 마찬가지로 여자들이 가만두지 않는 외모도 갖고 있으며, 형과 다르게 지식도 풍부하다. 패션센스만은 형이랑 맞춰입었는지 청바지에 가죽재킷 따위를 입고 다니지만 그런 옷을 입고도 멋져보일 수 있는 기럭지이지만 형하고 다르게 신사적이라 여자들을 꼬시는 일은 별로 없고, 딘은 이를 너드라고 표현했다.
@@ -56,63 +56,63 @@
 
 
 <style>
-    @font-face {
-        font-family: 'Calluna';
-        src: url(https://raw.githubusercontent.com/dudwo4020/deeplearning-project-s.html/main/sam.jpg) format('opentype');
-      }
-      * { 
-        box-sizing: border-box;
-      }
-      body {
-        font-family: Calluna, Arial, sans-serif;
-        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(https://raw.githubusercontent.com/dudwo4020/deeplearning-project-s.html/main/sam.jpg);
-        background-repeat: no-repeat;
-        background-attachment: fixed !important;
-        background-size: 100% !important;
-        background-position: center top !important;
-        padding: 1rem;
-        padding-top: 45%;
-        color: #fff;
-      }
-      
-      h1 {
-        font-size: 4rem;
-        text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-        line-height: 1;
-        position: absolute;
-        top: 10px;
-        font-weight: 100;
-      }
-      p {
-        font-size: 1.3rem;
-        text-align: left;
-        line-height: 1.6;
-        margin-left: 8rem;
-        margin-right: 8rem;
-        color:white;
-      }
-      h2 {
-        text-align: center;
-        text-transform: uppercase;
-        margin-bottom: 0;
-      }
-      span {
-        display: block;
-        margin: 0;
-        text-align: center;
-        font-size: 3rem;
-      }
-     
-    </style>
-    <script>
-    var nystories = document.querySelector("p").offsetTop;
-    window.onscroll = function() {
-      if (window.pageYOffset > 0) {
-     var opac = (window.pageYOffset / nystories);
-        console.log(opac);
-      document.body.style.background = "linear-gradient(rgba(255, 255, 255, " + opac + "), rgba(255, 255, 255, " + opac + ")), url(https://raw.githubusercontent.com/dudwo4020/deeplearning-project-s.html/main/sam.jpg);
-      }
+  @font-face {
+      font-family: 'Calluna';
+      src: url(https://raw.githubusercontent.com/dudwo4020/deeplearning-project-s.html/main/sam.jpg) format('opentype');
     }
+    * { 
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Calluna, Arial, sans-serif;
+      background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(https://raw.githubusercontent.com/dudwo4020/deeplearning-project-s.html/main/sam.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed !important;
+      background-size: 100% !important;
+      background-position: center top !important;
+      padding: 1rem;
+      padding-top: 45%;
+      color: #fff;
+    }
+    
+    h1 {
+      font-size: 4rem;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      line-height: 1;
+      position: absolute;
+      top: 10px;
+      font-weight: 100;
+    }
+    p {
+      font-size: 1.3rem;
+      text-align: left;
+      line-height: 1.6;
+      margin-left: 8rem;
+      margin-right: 8rem;
+      color: #000;
+    }
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    span {
+      display: block;
+      margin: 0;
+      text-align: center;
+      font-size: 3rem;
+    }
+   
+  </style>
+  <script>
+  var nystories = document.querySelector("p").offsetTop;
+  window.onscroll = function() {
+    if (window.pageYOffset > 0) {
+   var opac = (window.pageYOffset / nystories);
+      console.log(opac);
+    document.body.style.background = "linear-gradient(rgba(255, 255, 255, " + opac + "), rgba(255, 255, 255, " + opac + ")), url(https://raw.githubusercontent.com/dudwo4020/deeplearning-project-s.html/main/sam.jpg";
+    }
+  }
 </script>
 </body>
 </html>
