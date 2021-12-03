@@ -194,23 +194,24 @@
         // predict can take in an image, video or canvas html element
         const prediction = await model.predict(webcam.canvas);
         if (prediction[0].probability > 0.5) {
-            
-            var audio = new Audio('3.mp3');
-                audio.pause();
-        }
-        else {
-                var audio = new Audio('3.mp3');
-                audio.play();
-                progress = progress - 32.7
-                if (progress <= 0) {
-                    progress = 327 - 32.7
+
+                    var audio = new Audio('3.mp3');
+                    audio.pause();
+                    audio.currentTime = 0;
                 }
-                $('.progress').css('stroke-dashoffset', progress);
-                $('#counter').html(count);
-               
-        }
-        }
-    
+                else {
+                    var audio = new Audio('3.mp3');
+                    audio.play();
+                    progress = progress - 32.7
+                    if (progress <= 0) {
+                        progress = 327 - 32.7
+                    }
+                    $('.progress').css('stroke-dashoffset', progress);
+                    $('#counter').html(count);
+
+                }
+            }
+        
     init()
 </script>
 </body>
