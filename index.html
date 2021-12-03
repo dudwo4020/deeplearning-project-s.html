@@ -127,8 +127,8 @@
 
 <style type="text/css">
     class {
-        color: white;
-        text-decoration: none;
+        color: white ;
+        text-decoration : none;
     }
 </style>
 
@@ -189,7 +189,6 @@
         await predict();
         window.requestAnimationFrame(loop);
     }
-      var status = "bright"
     // run the webcam image through the image model
     async function predict() {
         // predict can take in an image, video or canvas html element
@@ -198,8 +197,6 @@
             
             var audio = new Audio('result.mp3');
                 audio.pause();
-
-                status ="bright"
         }
         else {
                 var audio = new Audio('result.mp3');
