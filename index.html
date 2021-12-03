@@ -195,7 +195,7 @@
         const prediction = await model.predict(webcam.canvas);
         if (prediction[0].probability > 0.5) {
              var audio = new Audio('3.mp3');
-                    audio.pause();
+                    audio.load();
                     audio.currentTime = 0;
                 }
                 else {
