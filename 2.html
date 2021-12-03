@@ -101,5 +101,95 @@ h1{color: black;
       }
     }
 </script>
+
+
+<div style="visibility: hidden; position: absolute;" id="webcam-container"></div>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+<script type="text/javascript">
+    // More API functions here:
+    // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+    // the link to your model provided by Teachable Machine export panel
+    const URL = "https://teachablemachine.withgoogle.com/models/r8X8UCIeo/";
+
+    let model, webcam, maxPredictions;
+
+    // Load the image model and setup the webcam
+    async function init() {
+        const modelURL = URL + "model.json";
+        const metadataURL = URL + "metadata.json";
+
+        // load the model and metadata
+        // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+        // or files from your local hard drive
+        // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+        model = await tmImage.load(modelURL, metadataURL);
+        maxPredictions = model.getTotalClasses();
+
+        // Convenience function to setup a webcam
+        const flip = true; // whether to flip the webcam
+        webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+        await webcam.setup(); // request access to the webcam
+        await webcam.play();
+        window.requestAnimationFrame(loop);
+
+        // append elements to the DOM
+        document.getElementById("webcam-container").appendChild(webcam.canvas);
+    }
+
+    async function loop() {
+        webcam.update(); // update the webcam frame
+        await predict();
+        window.requestAnimationFrame(loop);
+    }
+    // run the webcam image through the image model
+    async function predict() {
+        // predict can take in an image, video or canvas html element
+        const prediction = await model.predict(webcam.canvas);
+        if (  prediction[0].probability > 0.5) 
+                    
+                else {
+                   ( prediction[1].probability >0.50) {
+
+                    <style>
+    @font-face {
+        font-family: 'Calluna';
+        src: url(https://post-phinf.pstatic.net/MjAxNzA3MjRfOTEg/MDAxNTAwODY0NDg3MDg2.HtnDA9ndamqAGpMC_VxMUkXXAPv4aKjbMfd0C18q8JQg.b71hV8gyDvGvGoEaKwUluPMyq6mZjl_EeWltWf7gtKMg.JPEG/image_1716538881500864422045.jpg?type=w1200) format('opentype');
+      }
+      * { 
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Calluna, Arial, sans-serif;
+        background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(https://post-phinf.pstatic.net/MjAxNzA3MjRfOTEg/MDAxNTAwODY0NDg3MDg2.HtnDA9ndamqAGpMC_VxMUkXXAPv4aKjbMfd0C18q8JQg.b71hV8gyDvGvGoEaKwUluPMyq6mZjl_EeWltWf7gtKMg.JPEG/image_1716538881500864422045.jpg?type=w1200);
+        background-repeat: no-repeat;
+        background-attachment: fixed !important;
+        background-size: 100% !important;
+        background-position: center top !important;
+        padding: 1rem;
+        padding-top: 45%;
+        color: #fff;
+      }
+      <link rel ="stylessheet" href ="style.css">
+     
+    </style>
+    <script>
+    var nystories = document.querySelector("p").offsetTop;
+    window.onscroll = function() {
+      if (window.pageYOffset > 0) {
+     var opac = (window.pageYOffset / nystories);
+        console.log(opac);
+      document.body.style.background = "linear-gradient(rgba(255, 255, 255, " + opac + "), rgba(255, 255, 255, " + opac + ")), url(https://post-phinf.pstatic.net/MjAxNzA3MjRfOTEg/MDAxNTAwODY0NDg3MDg2.HtnDA9ndamqAGpMC_VxMUkXXAPv4aKjbMfd0C18q8JQg.b71hV8gyDvGvGoEaKwUluPMyq6mZjl_EeWltWf7gtKMg.JPEG/image_1716538881500864422045.jpg?type=w1200";
+      }
+    }
+</script>
+                }
+                    
+                }
+            }
+        
+    init()
+</script>
 </body>
 </html>
