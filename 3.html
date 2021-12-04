@@ -169,6 +169,13 @@
     
     audio.play();
           }
+          progress = progress-32.7
+                    if(progress <= 0) {
+                        progress = 327-32.7
+                    }
+                    $('.progress').css('stroke-dashoffset', progress);
+                    $('#counter').html(count);
+                }
       }
       init()
   </script>
