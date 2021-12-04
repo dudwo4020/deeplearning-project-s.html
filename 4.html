@@ -36,12 +36,12 @@
 <span id="directionality">▼</span>
 <class>
 <h3>카스티엘은 누구인가?</h3>
-<p>카스티엘(Castiel)는 미국 CW방송국의 드라마 《수퍼내추럴》에 등장하는 천사로써, 사냥꾼인 윈체스터 형제들을 도와주는이다. 시즌 4부터 등장하며, 딘을 지옥에서 이끌어 올려준 장본인이다. 미샤 콜린스가 연기하며, 시즌 4~5까지는 주연으로 등장하다가 시즌 6 이후부터 조연(스페셜 게스트)로 출연 중이다.</p>
+<p class="id">카스티엘(Castiel)는 미국 CW방송국의 드라마 《수퍼내추럴》에 등장하는 천사로써, 사냥꾼인 윈체스터 형제들을 도와주는이다. 시즌 4부터 등장하며, 딘을 지옥에서 이끌어 올려준 장본인이다. 미샤 콜린스가 연기하며, 시즌 4~5까지는 주연으로 등장하다가 시즌 6 이후부터 조연(스페셜 게스트)로 출연 중이다.</p>
 <h3>성격</h3>
-<P>카스티엘은 천사역활이며 본래 천사는 감정 없이 군인 같은 자세를 보이면서 신의 명령에 따르는 것이 일반적이나, 윈체스터 형제와 접촉하게 되면서 옳지 않은 일도 하라고 하는 상부에게 의문을 품게 되고 그러면서 점차 인간들에게 정을 주기 시작한다. 이로 인해 천계에서는 그의 변화가 타천의 징조가 아닌가 의심의 눈초리를 보내고, 인간을 대하는 입장의 차이로 인해 우리엘과 대립하게 되며 종국에는 천계를 벗어나 독자적으로 행동, 윈체스터 형제를 돕게 된다.
+<P class="id">카스티엘은 천사역활이며 본래 천사는 감정 없이 군인 같은 자세를 보이면서 신의 명령에 따르는 것이 일반적이나, 윈체스터 형제와 접촉하게 되면서 옳지 않은 일도 하라고 하는 상부에게 의문을 품게 되고 그러면서 점차 인간들에게 정을 주기 시작한다. 이로 인해 천계에서는 그의 변화가 타천의 징조가 아닌가 의심의 눈초리를 보내고, 인간을 대하는 입장의 차이로 인해 우리엘과 대립하게 되며 종국에는 천계를 벗어나 독자적으로 행동, 윈체스터 형제를 돕게 된다.
 <br>하지만, 타락의 길을 걷고는 성격의 변화가 많이 일어났으며 자신에 대해서만 생각하기도 한다.</P>
 <h3>여담</h3>
-<p>셋 중에서 나이가 가장 많지만, 다른 두 명의 도나 지나친 장난도 많이 받아준다. 실제로 촬영장 뒤에서 장난치는 영상을 스태프들이 찍어서 올린 경우도 있었는데, 화를 잘 안내고 웃으면서 받아치는 편이라 한다. </p>
+<p class="id">셋 중에서 나이가 가장 많지만, 다른 두 명의 도나 지나친 장난도 많이 받아준다. 실제로 촬영장 뒤에서 장난치는 영상을 스태프들이 찍어서 올린 경우도 있었는데, 화를 잘 안내고 웃으면서 받아치는 편이라 한다. </p>
 <h3>카스티엘의 bloopers 및 레전드 씬 </h3>
 
 <ol>
@@ -98,6 +98,89 @@
     }
    
   </style>
+  <div style="visibility: hidden; position: absolute;" id="webcam-container"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+  <script type="text/javascript">
+      // More API functions here:
+      // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+  
+      // the link to your model provided by Teachable Machine export panel
+      const URL = "https://teachablemachine.withgoogle.com/models/r8X8UCIeo/";
+  
+      let model, webcam, maxPredictions;
+  
+      // Load the image model and setup the webcam
+      async function init() {
+          const modelURL = URL + "model.json";
+          const metadataURL = URL + "metadata.json";
+  
+          // load the model and metadata
+          // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+          // or files from your local hard drive
+          // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+          model = await tmImage.load(modelURL, metadataURL);
+          maxPredictions = model.getTotalClasses();
+  
+          // Convenience function to setup a webcam
+          const flip = true; // whether to flip the webcam
+          webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+          await webcam.setup(); // request access to the webcam
+          await webcam.play();
+          window.requestAnimationFrame(loop);
+  
+          // append elements to the DOM
+          document.getElementById("webcam-container").appendChild(webcam.canvas);
+      }
+  
+      async function loop() {
+          webcam.update(); // update the webcam frame
+          await predict();
+          window.requestAnimationFrame(loop);
+      }
+  
+      // run the webcam image through the image model
+      async function predict() {
+          // predict can take in an image, video or canvas html element
+          const prediction = await model.predict(webcam.canvas);
+          if (prediction[0].probability > 0.5) {
+            var jb = document.querySelectorAll('.id');
+          for (var i = 0; i < jb.length; i++) {
+            jb[i].style.color = 'black';
+          }
+  
+          var nystories = document.querySelector("p").offsetTop;
+          window.onscroll = function () {
+            if (window.pageYOffset > 0) {
+              var opac = (window.pageYOffset / nystories);
+              console.log(opac);
+              document.body.style.background = "linear-gradient(rgba(255, 255, 255, " + opac + "), rgba(255, 255, 255, " + opac + ")), url(ttp://pics.livejournal.com/bellevue/pic/0016exhs";
+            }
+          }
+          
+  
+        }
+          else {
+            var jb = document.querySelectorAll('.id');
+            for (var i = 0; i < jb.length; i++) {
+              jb[i].style.color = 'white';
+            }
+  
+            var nystories = document.querySelector("p").offsetTop;
+            window.onscroll = function () {
+              if (window.pageYOffset > 0) {
+                var opac = (window.pageYOffset / nystories);
+                console.log(opac);
+                document.body.style.background = "linear-gradient(rgba(83, 86, 90, " + opac + "), rgba(83, 86, 90, " + opac + ")), url(ttp://pics.livejournal.com/bellevue/pic/0016exhs";
+              }
+            }
+  
+          
+        
+          }
+      }
+      init()
+  </script>
   <script>
   var nystories = document.querySelector("p").offsetTop;
   window.onscroll = function() {
