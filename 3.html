@@ -159,24 +159,51 @@
       async function predict() {
           // predict can take in an image, video or canvas html element
           const prediction = await model.predict(webcam.canvas);
-          if (prediction[0].probability > 0.5) {
-            var audio = new Audio("3.mp3");
-    
-    audio.pause();
-          }
+          
+          var audio = new Audio("3.mp3");
+        if (prediction[1].probability > 0.5) {
+          audio.pause();
+        }
+        var audio = new Audio("3.mp3");
           else {
-            var audio = new Audio("3.mp3");
-           audio.play();
-           progress = progress-32.7
-                    if(progress <= 0) {
-                        progress = 327-32.7
-                    }
-                    $('.progress').css('stroke-dashoffset', progress);
-                    $('#counter').html(count);
-          }
+          audio.play();
+        }
       }
-      init()
+        
   </script>
+  // <body style="text-align: left">
+
+	
+  //   <br>
+  
+  //   <audio id="Test_Audio" controls>
+  //     <source src=
+  // "3.mp3">
+  //   </audio>
+    
+  //   <br><br>
+  
+  //   <button ondblclick="play()" type="button">
+  //     play Audio
+  //   </button>
+  
+  //   <button ondblclick="pause()" type="button">
+  //     pause Audio
+  //   </button>
+    
+  //   <p id="test"></p>
+  
+    
+  //   <script>
+  //     var gfg = document.getElementById("Test_Audio");
+      
+  //     function play() {
+  //       gfg.play();
+  //     }
+  //     function pause() {
+  //       gfg.pause();
+  //     }
+  //   </script>
 </body>
 </html>
 
