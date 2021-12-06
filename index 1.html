@@ -19,11 +19,13 @@
     <style type="text/css">
         h1 {
             color: white;
+            border-bottom: 6px solid black;
         }
     </style>
 
 
     <h1>Supernatural</h1>
+   
 
 
     <style>
@@ -66,6 +68,13 @@
             padding-right: 100px;
         }
     </style>
+    <style>
+     a { text-decoration: none; color: black; }
+     a:visited { text-decoration: none; }
+     a:hover { text-decoration: none; }
+     a:focus { text-decoration: none; }
+     a:hover, a:active { text-decoration: none; }
+</style>
     <div id="grid">
 
         <div id="menu2">
@@ -112,6 +121,9 @@
 
             ol {
                 border-right: none;
+            }
+            h1{
+                border-bottom: none;
             }
         }
     </style>
@@ -162,13 +174,14 @@
     
         <button ondblclick="play()" type="button">
             play Audio
+            
         </button>
     
         <button ondblclick="pause()" type="button">
             pause Audio
         </button>
         
-        <p id="test"></p>
+        <!-- <p id="test"></p> -->
     
         
         <script>
@@ -180,6 +193,7 @@
             function pause() {
                 gfg.pause();
             }
+            
         </script>
 
 
