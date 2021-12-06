@@ -1,0 +1,786 @@
+<!-- <!-- <!doctype html>
+<html >
+	<head>
+	<meta charset="UTF-8">
+  <h1> menu</h1>
+  </head>
+  <body>
+   
+    <ul class="menu">
+    
+      <li>메뉴
+        <ul>
+          <li><a href="2.html" target="_blank">딘 윈체스터</a></li>
+     <li><a href="3.html" target="_blank">샘 윈체스터</a></li>
+     <li><a href="4.html" target="_blank">카스티엘</a></li>
+     <li><a href="https://namu.wiki/w/%EC%88%98%ED%8D%BC%EB%82%B4%EC%B6%94%EB%9F%B4" target="_blank" > 시리즈 정보 </a></li>
+     <li><a href="for series.html" target="_blank" > 그 이외의 정보 </a></li>
+        </ul>
+          </li>
+        
+      </li>
+    </ul>
+  
+  <style  type="text/css">
+    ul li{
+		list-style: none;
+	}
+    ul ul {display: none;position:absolute;}
+    ul li:hover>ul {display: block;}
+    
+    
+  </style>
+  </body>
+  </html>
+  <style type="text/css">
+    {
+        margin: 0;
+		padding: 0;
+	}
+    ol li{
+		list-style: none;
+	}
+    ul > ol> li {
+		float:left;
+		
+		position:absolute;
+	}
+    
+	
+    ul> li > ol > li {
+		
+		display:none;
+		
+	}
+    ul> li:hover > ol > li {
+		display:block;
+	}
+</style> -->
+<!-- <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="test">
+    <a href="3.html" style="color:red">Look ma, no hands </a>
+  </div>
+
+    
+  
+  <body>
+     <style> {
+    padding: 60px;
+    background: #f3f3f3;
+    min-height: 100vh;
+  }
+  
+  @keyframes sparkle {
+    from {
+      background-position: 0% 100%;
+    }
+    to {
+      background-position: 200% 100%;
+    }
+  }
+  .test {
+    background: black;
+    display: inline-block;
+    padding: 1em;
+    font-family: Helvetica Neue;
+    border-radius: 4px;
+    position: relative;
+  }
+  .test:before {
+    animation: sparkle 4s infinite linear;
+    background: linear-gradient(90deg, #7FEFBD 0%, #FFF689 11%, #EC0B43 22%, #7FEFBD 33%, #FFF689 44%, #EC0B43 55%, #7FEFBD 66%, #FFF689 77%, #EC0B43 88%, #7FEFBD 100%);
+    background-size: 300% 100%;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    filter: blur(3px);
+    z-index: -1;
+    transform: scale(0.99) translateY(3px);
+  }
+  <style>
+</body>
+/* </html> --> -->
+  <!-- <!DOCTYPE html>
+  <html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      <span>Supernatural</span>
+    </h1>
+    <div class='outer-scratch'>
+      <div class="inner-scratch">
+        <div class="background grain"></div>
+      </div>
+    </div>
+    <style>
+    @import url(https://fonts.googleapis.com/css?family=Roboto:100);
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/abstract.jpg");
+  background-size: cover;
+}
+
+.outer-scratch, .inner-scratch {
+  height: inherit;
+}
+
+.outer-scratch:after, .inner-scratch:after {
+  /* content: "";
+  width: 120%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 100px;
+  opacity: 0.08;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/scratch.png") repeat center center;
+  -webkit-animation: scratch 0.45s steps(1) infinite;
+  animation: scratch 0.45s steps(1) infinite;
+}
+
+.inner-scratch:after {
+  left: 30%;
+  -webkit-animation: inner-scratch 2s infinite;
+  animation: inner-scratch 2s infinite;
+}
+
+.grain:after {
+  content: "";
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  opacity: 0.11;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/662025/grain.jpg") repeat center center;
+  -webkit-animation: grain 0.5s steps(1) infinite;
+  animation: grain 0.5s steps(1) infinite;
+}
+
+/*  Basic Title  */
+h1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 3em;
+  text-align: center;
+  color: #fff;
+  -webkit-animation: 3s fade;
+  animation: 3s fade;
+}
+h1 span {
+  display: inline-block;
+  position: relative;
+  padding: 0.5em 1em;
+}
+h1 span:before {
+  display: block;
+  content: "";
+  width: 110%;
+  margin-left: -5%;
+  margin-bottom: 5%;
+  border-top: 1px solid #fff;
+  -webkit-animation: 2.5s draw;
+  animation: 2.5s draw;
+}
+h1 span:after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+  -webkit-animation: 2.5s draw-bottom;
+  animation: 2.5s draw-bottom;
+}
+
+/* Film Animations */
+@keyframes grain {
+  0%, 100% {
+    transform: translate(0, 0, 0);
+  }
+  10% {
+    transform: translate(-1%, -1%);
+  }
+  20% {
+    transform: translate(1%, 1%);
+  }
+  30% {
+    transform: translate(-2%, -2%);
+  }
+  40% {
+    transform: translate(3%, 3%);
+  }
+  50% {
+    transform: translate(-3%, -3%);
+  }
+  60% {
+    transform: translate(4%, 4%);
+  }
+  70% {
+    transform: translate(-4%, -4%);
+  }
+  80% {
+    transform: translate(2%, 2%);
+  }
+  90% {
+    transform: translate(-3%, -3%);
+  }
+}
+@keyframes scratch {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 0.075;
+  }
+  10% {
+    transform: translateX(-1%);
+  }
+  20% {
+    transform: translateX(1%);
+  }
+  30% {
+    transform: translateX(-2%);
+    opacity: 0.09;
+  }
+  40% {
+    transform: translateX(3%);
+  }
+  50% {
+    transform: translateX(-3%);
+    opacity: 0.05;
+  }
+  60% {
+    transform: translateX(8%);
+  }
+  70% {
+    transform: translateX(-3%);
+  }
+  80% {
+    transform: translateX(10%);
+    opacity: 0.02;
+  }
+  90% {
+    transform: translateX(-2%);
+  }
+}
+
+</style>
+  </body>
+  </html>  */ */
+  <!-- <!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		Audio paused method
+	</title>
+</head>
+
+<body style="text-align: center">
+
+
+	<audio id="Test_Audio" controls>
+		<source src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20190625153922/frog.mp3"
+		type="audio/mpeg">
+	</audio>
+	
+	<br><br>
+
+	<button ondblclick="play()" type="button">
+		play Audio
+	</button>
+
+	<button ondblclick="pause()" type="button">
+		pause Audio
+	</button>
+	
+	<p id="test"></p>
+
+  <style>
+    .button ondblclick="play()" type="button" {
+	background-color: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+	line-height: 50px;
+}
+.button:hover {
+	background-color: rgba(255, 255, 255, .2);
+}
+  </style>
+
+	<!-- html,body{
+  height:100%;
+}
+body{
+  text-align:center;
+}
+body:before{
+  content:'';
+  height:100%;
+  display:inline-block;
+  vertical-align:middle;
+}
+button{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+} -->
+
+
+	<!-- <script>
+		var gfg = document.getElementById("Test_Audio");
+		
+		function play() {
+			gfg.play();
+		}
+		function pause() {
+			gfg.pause();
+		}
+	</script>
+</body>
+
+</html> -->
+
+<!-- <div style="visibility: hidden; position: absolute;" id="webcam-container"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+  <script type="text/javascript">
+      // More API functions here:
+      // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+  
+      // the link to your model provided by Teachable Machine export panel
+      const URL = "https://teachablemachine.withgoogle.com/models/r8X8UCIeo/";
+  
+      let model, webcam, maxPredictions;
+  
+      // Load the image model and setup the webcam
+      async function init() {
+          const modelURL = URL + "model.json";
+          const metadataURL = URL + "metadata.json";
+  
+          // load the model and metadata
+          // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+          // or files from your local hard drive
+          // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+          model = await tmImage.load(modelURL, metadataURL);
+          maxPredictions = model.getTotalClasses();
+  
+          // Convenience function to setup a webcam
+          const flip = true; // whether to flip the webcam
+          webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
+          await webcam.setup(); // request access to the webcam
+          await webcam.play();
+          window.requestAnimationFrame(loop);
+  
+          // append elements to the DOM
+          document.getElementById("webcam-container").appendChild(webcam.canvas);
+      }
+  
+      async function loop() {
+          webcam.update(); // update the webcam frame
+          await predict();
+          window.requestAnimationFrame(loop);
+      }
+  
+      // run the webcam image through the image model
+      async function predict() {
+          // predict can take in an image, video or canvas html element
+          const prediction = await model.predict(webcam.canvas);
+          if (prediction[0].probability > 0.5) {
+            var audio = new Audio("3.mp3");
+    
+    audio.pause();
+          }
+          else {
+            var audio = new Audio("3.mp3");
+    
+    audio.play();
+          }
+      }
+      init()
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="index.js"></script> -->
+  <!-- <figure class="snip1384">
+    <img src="d.jpg" alt="sample83" />
+    <figcaption>
+      <h3>Fleece Marigold</h3>
+      <p>Which is worse, that everyone has his price, or that the price is always so low.</p><i class="ion-ios-arrow-right"></i>
+    </figcaption>
+    <a href="#"></a>
+  </figure>
+  <figure class="snip1384 hover"><img src="https://s3-us-west- --> 
+    <!-- <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+    </head>
+    <body>
+      <figure class="snip1141"><img src="d.jpg" alt="sq-sample27" />
+        <figcaption>
+          <div class="circle"><i class="ion-ios-plus-empty"> </i></div>
+          <h2>Paris York
+            
+          </h2>
+        </figcaption>
+        <a href="#"></a>
+      </figure>
+      
+        <a href="#"></a>
+      </figure>
+      <style>
+        @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,800);
+figure.snip1141 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 220px;
+  max-width: 310px;
+  max-height: 310px;
+  width: 100%;
+  background: #000000;
+  color: #ffffff;
+  text-align: left;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+figure.snip1141 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+figure.snip1141 img {
+  max-width: 100%;
+  position: relative;
+  opacity: 0.9;
+}
+
+figure.snip1141 .circle {
+  position: relative;
+  height: 55px;
+  width: 55px;
+  top: 0%;
+  left: 0%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  text-align: center;
+}
+
+figure.snip1141 .circle:before,
+figure.snip1141 .circle:after {
+  border: 2px solid white;
+  border-right-color: transparent;
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+figure.snip1141 .circle:before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+figure.snip1141 .circle:after {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+figure.snip1141 figcaption {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+figure.snip1141 h2 {
+  position: absolute;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: -1px;
+  line-height: 55px;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  padding: 0 20px;
+  opacity: 0;
+  -webkit-transform: translateX(-10%);
+  transform: translateX(-10%);
+}
+
+figure.snip1141 .icon {
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+}
+
+figure.snip1141 i {
+  color: white;
+  font-size: 48px;
+  line-height: 55px;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+figure.snip1141 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+figure.snip1141:hover .circle,
+figure.snip1141.hover .circle {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+figure.snip1141:hover .circle:before,
+figure.snip1141.hover .circle:before,
+figure.snip1141:hover .circle:after,
+figure.snip1141.hover .circle:after {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+figure.snip1141:hover h2,
+figure.snip1141.hover h2 {
+  opacity: 1;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+figure.snip1141:hover img,
+figure.snip1141.hover img {
+  opacity: 0.35;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+figure.snip1141:hover i,
+figure.snip1141.hover i {
+  opacity: 0;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+      </style>
+      <script>
+        $(".hover").mouseleave(
+    function() {
+      $(this).removeClass("hover");
+    }
+  );
+      </script>
+    </body>
+     </html> -->
+   
+    /* <!-- <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+      .main-content {
+  overflow:hidden;
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    
+    height: 100vh;
+    
+    background: linear-gradient(to right, rgba(36,31,31,1) 0%, rgba(36,31,31,1) 32%, rgba(74,71,70,1) 100%);
+    color: #fff;
+    text-align: center;
+}
+
+.vignette{
+  position:absolute;
+  width:100%; height:100%;
+  box-shadow:inset 0px 0px 150px 20px black;
+  mix-blend-mode: multiply;
+  -webkit-animation: vignette-anim 3s infinite; /* Safari 4+ */
+  /* -moz-animation:    vignette-anim 3s infinite; /* Fx 5+ */
+  /* -o-animation:      vignette-anim 3s infinite; /* Opera 12+ */
+ /* <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+ </head>
+ <body> */
+  /* <a href="https://player.vimeo.com/external/488076225.hd.mp4?s=9cf4808c4e76c0a9267abb75dbec48bc451a138f&amp;profile_id=175"
+    class="glightbox_video">
+    <svg width="131" height="131" viewBox="0 0 131 131" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="inner-circle"
+        d="M65 21C40.1488 21 20 41.1488 20 66C20 90.8512 40.1488 111 65 111C89.8512 111 110 90.8512 110 66C110 41.1488 89.8512 21 65 21Z"
+        fill="white"></path>
+      <circle class="outer_circle" cx="65.5" cy="65.5" r="64" stroke="white"></circle>
+      <path class="play" fill-rule="evenodd" clip-rule="evenodd" d="M60 76V57L77 66.7774L60 76Z" fill="#BF2428"></path>
+    </svg> */
+  </a>
+ </body>
+ </html>
+  <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=auto, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+        @import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Finger+Paint);
+
+body {
+  background: black;
+  overflow: hidden;
+  font: 5vw/100vh "Finger Paint";
+  text-align: left;
+  color: transparent;
+  backface-visibility: hidden;
+}
+
+span {
+  display: inline-block;
+  text-shadow: 0 0 0 whitesmoke;
+  animation: smoky 5s 3s both;
+}
+
+span:nth-child(even){
+  animation-name: smoky-mirror;
+}
+
+@keyframes smoky {
+  60% {
+    text-shadow: 0 0 40px whitesmoke;
+  }
+  to {
+    transform:
+      translate3d(15rem,-8rem,0)
+      rotate(-40deg)
+      skewX(70deg)
+      scale(1.5);
+    text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+
+@keyframes smoky-mirror {
+  60% {
+    text-shadow: 0 0 40px whitesmoke; }
+  to {
+    transform:
+      translate3d(18rem,-8rem,0)
+      rotate(-40deg) 
+      skewX(-70deg)
+      scale(2);
+     text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+
+@for $item from 1 through 21 {
+  span:nth-of-type(#{$item}){ 
+    animation-delay: #{(3 + ($item/10))}s; 
+  }
+} 
+      </style>
+    </head>
+    <body>
+      
+      <span>s</span><span>u</span><span>p</span><span>e</span><span>p</span><span>r</span><span>n</span><span>a</span><span>t</span><span>u</span><span>r</span><span>a</span><span>l</span><span>&nbsp;</span><span>i</span><span>n</span><span>f</span><span>o</span><span>r</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span>
+   
+    </body>
+    </html> 
