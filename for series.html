@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>More information of Supernatural </title>
       <h1>More information of Supernatural</h1>
-    </head>
+    
         <style>
       
       h1 {
@@ -19,6 +19,7 @@
       
     
   </style>
+  </head>
   <body>
     <style>
     body{
@@ -26,6 +27,22 @@
       background: linear-gradient(gray,black);
 
             }
+            .scale {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transition: all 0.3s ease-in-out;   /* 부드러운 모션을 위해 추가*/
+}
+.scale:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+.img {width:800px; height:280px; overflow:hidden }
           </style>
           <main>
         <ol>
@@ -42,9 +59,9 @@
               </ol>
             </main>
               
-       
-            <img src="ddd.jpg" width="60%">
-
+            <div class="img">
+           <div class= "scale"><a href="index 1.html"><img src="ddd.jpg"></a></div>
+          </div>
             <p>
             <div id="disqus_thread"></div>
 <script>
