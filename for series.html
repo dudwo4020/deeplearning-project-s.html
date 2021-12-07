@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>More information of Supernatural </title>
-      <h1>More information of Supernatural</h1>
-    
-        <style>
-      
-      h1 {
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
           font-size:50px;
       font-family: cursive;
   font-weight: bold;
@@ -15,6 +14,7 @@
   <style type="text/css">
       h1 {color: white;
       }
+      main {color: white}
       a {color:white}
       
     
@@ -23,7 +23,7 @@
   <body>
     <style>
     body{
-      height:110vh;
+      height:200vh;
       background: linear-gradient(gray,black);
 
             }
@@ -43,46 +43,203 @@
   -o-transform: scale(1.2);
 }
 .img {width:800px; height:280px; overflow:hidden }
-          </style>
-          <main>
-        <ol>
+    @import url("https://fonts.googleapis.com/css?family=Arima+Madurai:300");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Arima Madurai", cursive;
+  color: black;
+  font-size: 4rem;
+  letter-spacing: -3px;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);
+  position: relative;
+  z-index: 3;
+}
+
+.container {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 35rem;
+  background-image: linear-gradient(rgb(155, 140, 140),black);
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-position: center center;
+  padding: 2rem;
+}
+
+.bird {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+  background-size: auto 100%;
+  width: 88px;
+  height: 125px;
+  will-change: background-position;
+  animation-name: fly-cycle;
+  animation-timing-function: steps(10);
+  animation-iteration-count: infinite;
+}
+.bird--one {
+  animation-duration: 1s;
+  animation-delay: -0.5s;
+}
+.bird--two {
+  animation-duration: 0.9s;
+  animation-delay: -0.75s;
+}
+.bird--three {
+  animation-duration: 1.25s;
+  animation-delay: -0.25s;
+}
+.bird--four {
+  animation-duration: 1.1s;
+  animation-delay: -0.5s;
+}
+
+.bird-container {
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  transform: scale(0) translateX(-10vw);
+  will-change: transform;
+  animation-name: fly-right-one;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.bird-container--one {
+  animation-duration: 15s;
+  animation-delay: 0;
+}
+.bird-container--two {
+  animation-duration: 16s;
+  animation-delay: 1s;
+}
+.bird-container--three {
+  animation-duration: 14.6s;
+  animation-delay: 9.5s;
+}
+.bird-container--four {
+  animation-duration: 16s;
+  animation-delay: 10.25s;
+}
+
+@keyframes fly-cycle {
+  100% {
+    background-position: -900px 0;
+  }
+}
+@keyframes fly-right-one {
+  0% {
+    transform: scale(0.3) translateX(-10vw);
+  }
+  10% {
+    transform: translateY(2vh) translateX(10vw) scale(0.4);
+  }
+  20% {
+    transform: translateY(0vh) translateX(30vw) scale(0.5);
+  }
+  30% {
+    transform: translateY(4vh) translateX(50vw) scale(0.6);
+  }
+  40% {
+    transform: translateY(2vh) translateX(70vw) scale(0.6);
+  }
+  50% {
+    transform: translateY(0vh) translateX(90vw) scale(0.6);
+  }
+  60% {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+  100% {
+    transform: translateY(0vh) translateX(110vw) scale(0.6);
+  }
+}
+@keyframes fly-right-two {
+  0% {
+    transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+  }
+  10% {
+    transform: translateY(0vh) translateX(10vw) scale(0.4);
+  }
+  20% {
+    transform: translateY(-4vh) translateX(30vw) scale(0.6);
+  }
+  30% {
+    transform: translateY(1vh) translateX(50vw) scale(0.45);
+  }
+  40% {
+    transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+  }
+  50% {
+    transform: translateY(0vh) translateX(90vw) scale(0.45);
+  }
+  51% {
+    transform: translateY(0vh) translateX(110vw) scale(0.45);
+  }
+  100% {
+    transform: translateY(0vh) translateX(110vw) scale(0.45);
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+	
+    <h1>information of supernatural</h1>
+    
+    <div class="bird-container bird-container--one">
+      <div class="bird bird--one"></div>
+    </div>
+    
+    <div class="bird-container bird-container--two">
+      <div class="bird bird--two"></div>
+    </div>
+    
+    <div class="bird-container bird-container--three">
+      <div class="bird bird--three"></div>
+    </div>
+    
+    <div class="bird-container bird-container--four">
+      <div class="bird bird--four"></div>
+    </div>
+    
+  </div>
+  <main>
+    <ol>
+      
+          <li><a href="https://www.instagram.com/jensenackles/">딘 윈체스터(젠슨 액클스)의 인스타</a></li>
+          <li><a href="https://www.instagram.com/jaredpadalecki/">샘 윈체스터(제러드 파달렉키)의 인스타</a></li>
+          <li><a href="https://www.instagram.com/misha/">카스티엘(미샤 콜린스)의 인스타</a></li>
+        
+                  <li><a href="https://youtu.be/tCZy8cAgBlM">슈퍼내추럴 패러디영상</a></li>
+                <li><a href="  https://youtu.be/Nsy06n-omrg">슈퍼내추럴 패러디영상2</a></li>
+                 
+                  <li><a href="https://youtu.be/gGaAiZBR4aY">시즌1~시즌15 까지의 bloopers</a></li>
+                  
+          </ol>
+        </main>
           
-              <li><a href="https://www.instagram.com/jensenackles/">딘 윈체스터(젠슨 액클스)의 인스타</a></li>
-              <li><a href="https://www.instagram.com/jaredpadalecki/">샘 윈체스터(제러드 파달렉키)의 인스타</a></li>
-              <li><a href="https://www.instagram.com/misha/">카스티엘(미샤 콜린스)의 인스타</a></li>
-            
-                      <li><a href="https://youtu.be/tCZy8cAgBlM">슈퍼내추럴 패러디영상</a></li>
-                    <li><a href="  https://youtu.be/Nsy06n-omrg">슈퍼내추럴 패러디영상2</a></li>
-                     
-                      <li><a href="https://youtu.be/gGaAiZBR4aY">시즌1~시즌15 까지의 bloopers</a></li>
-                      
-              </ol>
-            </main>
-              
-            <div class="img">
-           <div class= "scale"><a href="index 1.html"><img src="ddd.jpg"></a></div>
-          </div>
-            <p>
-            <div id="disqus_thread"></div>
+        <div class="img">
+       <div class= "scale"><a href="index 1.html"><img src="ddd.jpg"></a></div>
+      </div>
+      <p>
+        <div id="disqus_thread"></div>
 <script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://supernatural-1.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://supernatural-1.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </p>
-      </body>
-    
-    </html>
+</body>
+</html>
